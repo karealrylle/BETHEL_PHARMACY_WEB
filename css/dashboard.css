@@ -1,0 +1,713 @@
+/* ========================================
+   DASHBOARD LAYOUTsection
+   ======================================== */
+
+.content-container {
+    display: flex;
+    gap: 55px;
+    margin-top: 10px;
+}
+
+.dashboard-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    align-items: flex-start;
+}
+
+.dashboard-left {
+    flex: 0 0 10px;
+}
+
+.dashboard-right {
+    margin-top: -20px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.dashboard-row {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Content Header with Clock Buttons */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+/* Clock In/Out Buttons */
+.clock-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.clock-btn {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.clock-in-btn {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.clock-in-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.clock-out-btn {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.clock-out-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.clock-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.clock-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 40px;
+    background: #e8f5e9;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #155724;
+    font-weight: 500;
+}
+
+.clock-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #28a745;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* ========================================
+   DASHBOARD BOXES (4 STATUS BOXES)
+   ======================================== */
+
+.box {
+    width: 212px;
+    height: 140px;
+    border-radius: 4px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Box Color Variants */
+.box.green {
+    background: rgba(1, 167, 104, 0.3);
+    border-color: #01A768;
+}
+
+.box.yellow {
+    background: rgba(254, 214, 0, 0.3);
+    border-color: #FED600;
+}
+
+.box.blue {
+    background: rgba(3, 169, 245, 0.3);
+    border-color: #03A9F5;
+}
+
+.box.red {
+    background: rgba(240, 72, 62, 0.3);
+    border-color: #F0483E;
+}
+
+/* Box Inner Content */
+.box-inner {
+    flex: 1;
+    background: white;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.box.green .box-inner { border-color: #01A768; }
+.box.yellow .box-inner { border-color: #FED600; }
+.box.blue .box-inner { border-color: #03A9F5; }
+.box.red .box-inner { border-color: #F0483E; }
+
+.box-inner img {
+    width: 37px;
+    height: 37px;
+}
+
+.box-status {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.box-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.box-view {
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+    color: #1D242E;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+/* ========================================
+   ACTIVITY BOXES (Vertical Stack)
+   ======================================== */
+
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 0;
+}
+
+.activity-box {
+    width: 100%;
+    max-width: 310px;
+    height: 97px;
+    border: 1px solid rgba(29, 36, 46, 0.3);
+    border-radius: 4px;
+    background: white;
+}
+
+.activity-header {
+    padding: 8px 0 8px 18px;
+    border-bottom: 1px solid rgba(29, 36, 46, 0.3);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.activity-content {
+    padding: 10px 0 0 18px;
+}
+
+.activity-number {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.activity-label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* ========================================
+   RECENT ACTIVITY SECTION (Right Side)
+   ======================================== */
+
+.recent-activity-section {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #000;
+    margin-top: 10px;
+    height: 288px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.recent-activity-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #101820;
+    border-bottom: 1.5px solid #1D242E;
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.recent-activity-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding-right: 8px;
+}
+
+/* Custom Scrollbar - Vertical Only */
+.recent-activity-grid::-webkit-scrollbar {
+    width: 4px;
+    height: 0; 
+}
+
+.recent-activity-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.recent-activity-grid::-webkit-scrollbar-thumb {
+    background: #7979798e;
+    border-radius: 10px;
+}
+
+.recent-activity-grid::-webkit-scrollbar-thumb:hover {
+    background: #383838;
+}
+
+/* Activity Cards */
+.activity-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+    flex-shrink: 0;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.activity-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.377);
+}
+
+.activity-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.activity-user {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 13px;
+    flex: 1;
+}
+
+.activity-time {
+    color: #7f8c8d;
+    font-size: 11px;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.activity-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px 12px;
+    margin-top: 0;
+    flex: 1;
+    overflow: hidden;
+    align-items: start;
+}
+
+.activity-detail-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D242E;
+    margin-bottom: 0;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.activity-detail-value {
+    font-size: 11px;
+    font-weight: 400;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.3;
+    margin-top: 2px;
+}
+
+/* ========================================
+   SALES HISTORY TABLE
+   ======================================== */
+
+.sales-history {
+    width: 610px;
+    height: 288px;
+    background: #F6F7F8;
+    border: 1px solid #1D242E;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-left: 2px;
+}
+
+.sales-header {
+    padding: 15px 20px;
+    background: #1D242E;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.sales-content {
+    flex: 1; /* Take remaining space */
+    overflow: hidden; /* Remove inner scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.sales-table thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.sales-table thead tr {
+    display: table-row;
+    width: 100%;
+}
+
+.sales-table th {
+    padding: 10px 13px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1D242E;
+    border-bottom: 1px solid #ddd;
+    background: white;
+}
+
+.sales-table tbody {
+    display: block;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(293px - 100px);
+    text-align: center;
+}
+
+.sales-table tbody tr {
+    background: white;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    display: table;
+    width: calc(100% - 5px);
+    table-layout: fixed;
+    margin-bottom: 10px;
+}
+
+.sales-table td {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #1D242E;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Column Widths - Matching Header and Body */
+.sales-table th:nth-child(1),
+.sales-table td:nth-child(1) { 
+    width: 22%; 
+} /* Transaction ID */
+
+.sales-table th:nth-child(2),
+.sales-table td:nth-child(2) { 
+    width: 18%; 
+} /* Time */
+
+.sales-table th:nth-child(3),
+.sales-table td:nth-child(3) { 
+    width: 12%; 
+    text-align: center;
+} /* Items */
+
+.sales-table th:nth-child(4),
+.sales-table td:nth-child(4) { 
+    width: 22%; 
+} /* Amount */
+
+.sales-table th:nth-child(5),
+.sales-table td:nth-child(5) { 
+    width: 26%; 
+} /* Payment Method */
+
+/* Scrollbar for Sales Content */
+/* .sales-content::-webkit-scrollbar {
+    width: 2px;
+}
+
+.sales-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sales-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.sales-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */
+
+/* Empty State */
+.sales-content > div {
+    padding: 20px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+
+.recent-activity {
+    width: 310px;
+}
+
+.recent-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Dashboard boxes */
+.dashboard-boxes,
+.inventory-boxes {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 3vw, 40px);
+    margin-top: 25px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.dashboard-box,
+.inventory-box {
+    width: clamp(290px, 15vw, 250px);
+    min-width: 290px;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.24);
+    flex: 0 1 auto;
+}
+
+/* Dashboard inner box */
+.dashboard-box-inner {
+    flex: 1;
+    background: #fff;
+    border-bottom: 1px solid;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.dashboard-box-inner img {
+    width: 35px;
+    height: 35px;
+}
+
+.dashboard-box-number {
+    font-weight: 650;
+    font-size: clamp(18px, 1.5vw, 22px);
+    line-height: 1.2;
+}
+
+.dashboard-box-label {
+    font-weight: 550;
+    font-size: clamp(12px, 1vw, 14px);
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.dashboard-box-view {
+    font-size: clamp(10px, 0.8vw, 11px);
+    line-height: 22px;
+    text-align: center;
+    color: #1D242E;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+/* Recent activity - Dashboard */
+.dashboard-activity-section,
+.recent-activity-section {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    min-height: 0;
+}
+
+.dashboard-activity-title,
+.recent-activity-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.dashboard-activity-grid,
+.recent-activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 15px;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.dashboard-card,
+.activity-card {
+    background: #fff;
+    border: 1px solid rgba(29,36,46,0.15);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 140px;
+    min-height: 140px;
+    max-height: 140px;
+}
+
+.dashboard-card:hover,
+.activity-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.dashboard-card-header,
+.activity-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    flex-shrink: 0;
+}
+
+.dashboard-user,
+.activity-user {
+    font-weight: 600;
+    font-size: 13px;
+    color: #1D242E;
+    flex: 1;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-time,
+.activity-time {
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.dashboard-details,
+.activity-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 0;
+    flex: 1;
+    overflow: hidden;
+}
+
+.dashboard-detail-label,
+.activity-detail-label {
+    font-size: 10px;
+    color: #666;
+    margin-bottom: 2px;
+    line-height: 1.2;
+}
+
+.dashboard-detail-value,
+.activity-detail-value {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2c3e50;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1400px) {
+    .dashboard-boxes,
+    .inventory-boxes {
+        gap: clamp(15px, 2.5vw, 30px);
+    }
+    
+    .dashboard-box,
+    .inventory-box {
+        width: clamp(180px, 14vw, 230px);
+        min-width: 180px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .dashboard-boxes,
+    .inventory-boxes {
+        gap: clamp(12px, 2vw, 25px);
+    }
+    
+    .dashboard-box,
+    .inventory-box {
+        width: clamp(160px, 13vw, 210px);
+        min-width: 160px;
+    }
+}
+

@@ -1,0 +1,368 @@
+/* Management Panel Styles */
+.management-panel {
+    width: calc(100% - 18.5rem);
+    min-height: 25rem; /* Fixed minimum height */
+    height: calc(100vh - 11rem); /* Responsive height based on viewport */
+    max-height: 90vh; /* Prevent panel from becoming too tall */
+    background: #F8F9FA;
+    border: 0.1125rem solid #A81C20;
+    border-radius: 1rem;
+    margin: 1.65rem 0 0 0;
+    padding: 1.25rem;
+    position: absolute;
+    left: 17rem;
+    right: 1rem;
+    top: 8.5rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Panel Controls Layout */
+.panel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.panel-controls form {
+    margin: 0;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    min-width: 23rem;
+    height: 2.5rem;
+    background: white;
+    border: 0.15625rem solid #C92126;
+    border-radius: 0.25rem;
+    padding: 0.75rem 0.75rem;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background: transparent;
+    min-width: 0;
+    padding: 8px 35px 8px 12px;
+}
+
+.inventory-search-form .search-icon {
+    position: absolute;
+    right: 12px;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Filter Form */
+.filter-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-dropdown {
+    width: 120px;
+    height: 38px;
+    padding: 0 5px;
+    border: 2px solid rgba(29, 36, 46, 0.3);
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;    
+    background: white;
+}
+
+/* Filter Buttons */
+.apply-filter-btn {
+    height: 38px;
+    padding: 0 19px;
+    background: #C92126;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.apply-filter-btn:hover {
+    background: #A81C20;
+}
+
+.reset-filter-btn {
+    height: 38px;
+    padding: 0 15px;
+    background: #6C757D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.reset-filter-btn:hover {
+    background: #5A6268;
+}
+
+/* Add Product Button */
+.add-product-btn {
+    min-width: 12rem;
+    width: auto;
+    height: 2.8rem;
+    background: #C92126;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    top: 6.1875rem;
+    right: 1.25rem;
+    padding: 0 1.5rem;
+    margin-right: 10px  ;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.add-product-btn:hover {
+    background: #A81C20;
+}
+
+/* Print Button */
+.print-btn {
+    background: #c2251d;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.print-btn:hover {
+    background: #a01e18;
+}
+
+/* Products Table Container */
+.products-table-container {
+    width: 100%;
+    flex: 1;
+    min-height: 15rem;
+    max-height: calc(100% - 1.55rem); 
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 0.0625rem solid rgba(29, 36, 46, 0.3);
+    border-radius: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #C92126 #f1f1f1;
+    position: relative;
+}
+
+.products-table-container::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.products-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.products-table-container::-webkit-scrollbar-thumb {
+    background: #C92126;
+    border-radius: 0.25rem;
+}
+
+.products-table-container::-webkit-scrollbar-thumb:hover {
+    background: #A81C20;
+}
+
+/* Products Table */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table thead {
+    position: sticky;
+    top: 0;
+    background: #C92126;
+    color: white;
+    z-index: 10;
+}
+
+.products-table th {
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    border-bottom: 0.0625rem solid rgba(29, 36, 46, 0.3);
+    white-space: nowrap;
+    position: relative;
+}
+
+.products-table td {
+    text-align: center;
+    padding: 0.625rem 0.5rem;
+    font-size: 0.6875rem;
+    border-bottom: 0.0625rem solid rgba(29, 36, 46, 0.1);
+    color: #1D242E;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+/* Action Columns - Simplified */
+.action-cell {
+    text-align: center;
+    padding: 0.5rem;
+    width: 50px; /* Consistent width for both action columns */
+}
+
+/* Remove the fixed width constraints for action column headers */
+.products-table th:nth-last-child(2),
+.products-table th:last-child {
+    width: auto; /* Remove fixed width */
+    text-align: center;
+}
+
+.products-table td:nth-last-child(2),
+.products-table td:last-child {
+    text-align: center;
+    width: auto; /* Remove fixed width */
+}
+
+/* Action Icons */
+.edit-icon,
+.delete-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; 
+    flex-wrap: nowrap;
+    padding: 0 0.5rem;
+}
+
+.action-buttons > * {
+    flex-shrink: 0;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.status-green {
+    background: rgba(1, 167, 104, 0.2);
+    color: #01A768;
+}
+
+.status-badge.status-orange {
+    background: rgba(255, 152, 0, 0.2);
+    color: #FF9800;
+}
+
+.status-badge.status-red {
+    background: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+}
+
+/* Batch View Button */
+.view-batches-btn {
+    padding: 0px 3px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.view-batches-btn:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.view-batches-btn.status-green {
+    background: rgba(1, 167, 104, 0.2);
+    color: #01A768;
+}
+
+.view-batches-btn.status-yellow {
+    background: rgba(254, 214, 0, 0.2);
+    color: #B89500;
+}
+
+.view-batches-btn.status-orange {
+    background: #fd8a1e44;
+    color: #da781c;
+}
+
+.view-batches-btn.status-red {
+    background: rgba(240, 72, 62, 0.2);
+    color: #c2251d;
+}
+
+.no-batches-text {
+    color: #999;
+    font-size: 11px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .management-panel {
+        left: 1rem;
+        width: calc(100% - 2rem);
+    }
+    
+    .products-table th,
+    .products-table td {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.65rem;
+    }
+    
+    .add-product-btn {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0.5rem 0;
+    }
+}

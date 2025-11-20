@@ -1,0 +1,54 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #EEEEEE 30%, #808080 100%);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Content Area */
+.content {
+    max-width: calc(100vw - 256px);
+    margin: 30px 20px 30px 256px;
+    padding: 10px 20px;
+    max-height: calc(100vh - 103px);
+    overflow: hidden;
+}
+
+.content h2 {
+    margin: 0;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 24px;
+    letter-spacing: 0;
+    width: auto;
+    height: 24px;
+}
+
+.top-section {
+    max-width: 1280px;
+    margin: 10px auto 0 276px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-section h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1D242E;
+}

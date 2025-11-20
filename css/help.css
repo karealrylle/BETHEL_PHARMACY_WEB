@@ -1,0 +1,336 @@
+/* ========================================
+   HELP PAGE STYLES
+   ======================================== */
+
+.notifications-container {
+    padding-left: 145px;
+    padding-right: 20px;
+    padding-top: 20px;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+.help-content-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-left: 145px;
+}
+
+.help-content-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.help-content-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.help-content-wrapper::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.help-content-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #A81C20;
+}
+
+.help-section {
+    background: white;
+    border: 2px solid #ac0c11;
+    border-radius: 16px;
+    padding: 11px 20px;
+    margin-bottom: 14px;
+}
+
+.help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 145px;
+    margin-bottom: 10px;
+}
+
+.help-header h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1D242E;
+}
+
+/* ========================================
+   HELP PAGE STYLES
+   ======================================== */
+
+.help-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D242E;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #ac0c11;
+    padding-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #2c2c2c;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* System Status Grid */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #c9c9c9;
+}
+
+.status-label {
+    font-weight: 500;
+    color: #1D242E;
+}
+
+.status-indicator {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-indicator.online {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-indicator.offline {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.two-column-layout .help-section {
+    margin-bottom: 0;
+}
+
+/* Support Form */
+.support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D242E;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 6px 14px;
+    border: 1px solid #7c7c7c;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #C92126;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.submit-ticket-btn {
+    padding: 12px 20px;
+    background: #ffffff;
+    border: 2px solid #A81C20;
+    border-radius: 8px;
+    color: #A81C20;
+    font-size: 16px;
+    font-weight: 620;
+    cursor: pointer;
+    transition: all 0.3s;
+    align-self: flex-end;
+    margin: 5px;
+}
+
+.submit-ticket-btn:hover {
+    background: #A81C20;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(201, 33, 38, 0.3);
+}
+
+/* FAQ Section */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item {
+    border: 1px solid #949696;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 4px 20px;
+    background: #f8f9fa;
+    font-size: 12px;
+    font-weight: 450;
+    color: #1D242E;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background: #e9ecef;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 10px;
+    font-size: 12px;
+    color: #8a0606;
+    line-height: 1.6;
+    background: white;
+}
+
+.faq-answer.active {
+    display: block;
+    padding: 15px 20px;
+    max-height: 150px;
+}
+
+/* Troubleshooting Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tip-card {
+    background: #f8f9fa;
+    border: 2px solid #808283;
+    border-radius: 12px;
+    padding: 20px 20px;
+    transition: transform 0.3s;
+}
+
+.tip-card:hover {
+    transform: translateY(-3px);
+    border-color: #C92126;
+}
+
+.tip-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D242E;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notifications-container {
+        padding: 10px;
+        height: auto;
+    }
+    
+    .help-content-wrapper {
+        overflow-y: visible;
+        padding-right: 0;
+    }
+    
+    .help-section {
+        padding: 20px;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-ticket-btn {
+        align-self: stretch;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .notifications-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .help-section h3 {
+        font-size: 20px;
+    }
+    
+    .status-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}

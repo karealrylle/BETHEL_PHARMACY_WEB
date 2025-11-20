@@ -1,0 +1,990 @@
+/* ========================================
+   REPORTS PAGE LAYOUT
+   ======================================== */
+
+.content {
+    padding: 0px 0px 10px 20px;
+}
+
+/* Reports Header */
+.reports-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reports-header h2 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 24px;
+    letter-spacing: 0;
+    width: auto;
+    height: 24px;
+}
+
+.download-btn {
+    background: white;
+    border: 2px solid #000000;
+    color: #000000;
+    padding: 10px 40px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.download-btn:hover {
+    background: #000000;
+    color: white;
+}
+/* ========================================
+   REPORT TABS
+   ======================================== */
+
+.report-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.report-tab {
+    flex: 1;
+    padding: 12px 20px;
+    background: white;
+    border: 2px solid #C92126;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #C92126;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.report-tab:hover {
+    background: linear-gradient(500deg, rgb(194, 1, 1) 10%, white 100%);
+    border-color: #C92126;
+    color: white;
+}
+
+.report-tab.active {
+    background: #C92126;
+    border-color: #C92126;
+    color: white;
+}
+
+/* ========================================
+   DATE RANGE FILTER BAR
+   ======================================== */
+
+.filter-bar {
+    background: white;
+    border: 1px solid #4d4d4d;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+.date-filter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.date-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-inputs label {
+    font-weight: 600;
+    color: #1D242E;
+    font-size: 14px;
+}
+
+.date-inputs input[type="date"] {
+    padding: 4px 10px;
+    border: 2px solid #4d4d4d;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1D242E;
+}
+
+.date-inputs span {
+    color: #666;
+    font-size: 14px;
+}
+
+.quick-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quick-filters label {
+    font-weight: 600;
+    color: #1D242E;
+    font-size: 14px;
+}
+
+.quick-btn {
+    padding: 5px 15px;
+    background: white;
+    border: 2px solid #4d4d4d;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.quick-btn:hover {
+    border-color: #C92126;
+    color: #C92126;
+}
+
+.quick-btn.active {
+    background: #1D242E;
+    border-color: #1D242E;
+    color: white;
+}
+
+/* ========================================
+   SUMMARY BOXES 
+   ======================================== */
+
+.summary-boxes,
+.summary-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: -15px;
+}
+
+.summary-box,
+.summary-card {
+    flex: 0 1 clamp(80px, 20%, 220px);
+    min-width: 245px;
+    background: white;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary-box:hover,
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.summary-box.active,
+.summary-card.active {
+    border-width: 6px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Color variants */
+.summary-box.blue,
+.summary-card.blue {
+    border-color: #03A9F5;
+    background: linear-gradient(135deg, rgba(3,169,245,0.2) 0%, white 100%);
+}
+
+.summary-box.blue.active,
+.summary-card.blue.active {
+    background: linear-gradient(135deg, rgba(3,169,245,0.2) 0%, white 100%);
+}
+
+.summary-box.green,
+.summary-card.green {
+    border-color: #01A768;
+    background: linear-gradient(135deg, rgba(1,167,104,0.1) 0%, white 100%);
+}
+
+.summary-box.green.active,
+.summary-card.green.active {
+    background: linear-gradient(135deg, rgba(1,167,104,0.2) 0%, white 100%);
+}
+
+.summary-box.orange,
+.summary-card.orange {
+    border-color: #FF9800;
+    background: linear-gradient(135deg, rgba(255,152,0,0.1) 0%, white 100%);
+}
+
+.summary-box.orange.active,
+.summary-card.orange.active {
+    background: linear-gradient(135deg, rgba(255,152,0,0.2) 0%, white 100%);
+}
+
+.summary-box.red,
+.summary-card.red {
+    border-color: #F44336;
+    background: linear-gradient(135deg, rgba(244,67,54,0.1) 0%, white 100%);
+}
+
+.summary-box.red.active,
+.summary-card.red.active {
+    background: linear-gradient(135deg, rgba(244,67,54,0.2) 0%, white 100%);
+}
+
+.summary-box-label,
+.card-label {
+    font-size: clamp(15px, 1vw, 13px);
+    color: #555555;
+    margin-bottom: 5px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.summary-box-value,
+.card-value {
+    font-size: clamp(24px, 2.5vw, 27px);
+    font-weight: 700;
+    color: #1D242E;
+    text-align: center;
+}
+
+.summary-box-change {
+    font-size: clamp(11px, 1vw, 13px);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.summary-box-change.positive {
+    color: #01A768;
+}
+
+.summary-box-change.negative {
+    color: #F44336;
+}
+
+.summary-box-change.positive::before {
+    content: '▲';
+    font-size: 10px;
+}
+
+.summary-box-change.negative::before {
+    content: '▼';
+    font-size: 10px;
+}
+
+/* ========================================
+   DETAILS PANEL (Universal Container)
+   ======================================== */
+
+.details-panel,
+.inventory-details-section {
+    background: white;
+    border: 3px solid #383e46;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: calc(200vh - 15rem);
+    min-height: 13rem;
+    max-height:  calc(100vh - 35rem);
+    overflow-y: auto;
+}
+
+.details-content {
+    display: none;
+}
+
+.details-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-content h3,
+.inventory-details-section h3 {
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 600;
+    color: #1D242E;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5c5c5c;
+    text-align: center;
+}
+
+/* ========================================
+   TABLES (Universal for All Reports)
+   ======================================== */
+
+.details-table,
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+    text-align: center;
+}
+
+/* .details-table thead,
+.inventory-table thead {
+    background: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+} */
+
+.details-table th,
+.inventory-table th {
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 11px;
+    color: #1D242E;
+    border-bottom: 2px solid #5c5c5c;
+    text-align: center;
+}
+
+.details-table td,
+.inventory-table td {
+    padding: 10px 10px;
+    font-size: 11px;
+    color: #424242;
+    border-bottom: 1px solid #eee;
+    
+}
+
+.details-table tbody tr:hover,
+.inventory-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px !important;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.status-badge.status-green {
+    background: rgba(1, 167, 104, 0.2);
+    color: #01A768;
+}
+
+.status-badge.status-orange {
+    background: rgba(255, 152, 0, 0.2);
+    color: #FF9800;
+}
+
+.status-badge.status-red {
+    background: rgba(244, 67, 54, 0.2);
+    color: #F44336;
+}
+
+/* ========================================
+   STAT CARDS (Inside Details Panel)
+   ======================================== */
+
+.details-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(73, 75, 102, 0.185) 0%, white 100%);
+    border: 2px solid #4a545f;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+.stat-card-label {
+    font-size: 13px;
+    color: #424242;
+    margin-bottom: 10px;
+    font-weight: 550;
+}
+
+.stat-card-value {
+    font-size: clamp(23px, 2vw, 30px);
+    font-weight: 650;
+    color: #1D242E;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+.details-panel::-webkit-scrollbar,
+.inventory-details-section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.details-panel::-webkit-scrollbar-track,
+.inventory-details-section::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.details-panel::-webkit-scrollbar-thumb,
+.inventory-details-section::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.details-panel::-webkit-scrollbar-thumb:hover,
+.inventory-details-section::-webkit-scrollbar-thumb:hover {
+    background: #A81C20;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media screen and (max-width: 1200px) {
+    .summary-box,
+    .summary-card {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .date-filter-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .report-tabs {
+        flex-direction: column;
+    }
+    
+    .summary-box,
+    .summary-card {
+        flex: 1 1 100%;
+    }
+    
+    .details-panel,
+    .inventory-details-section {
+        max-height: 60vh;
+    }
+}
+
+/* ========================================
+   STAFF SHIFT CARDS
+   ======================================== */
+
+.staff-shifts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 10px;
+    max-height: calc(70vh - 50px);
+    overflow-y: auto;
+    padding-right: 8px;
+    
+}
+
+/* Scrollbar styling for staff shifts container */
+.staff-shifts-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.staff-shifts-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.staff-shifts-container::-webkit-scrollbar-thumb {
+    background: #c4c4c4;
+    border-radius: 10px;
+}
+
+.staff-shifts-container::-webkit-scrollbar-thumb:hover {
+    background: #A81C20;
+}
+
+.staff-shift-card {
+    background: rgb(255, 255, 255);
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+
+/* Excellent Performance Card Style */
+.staff-shift-card.excellent {
+    border-color: #01A768;
+    background: linear-gradient(190deg, rgba(162, 221, 198, 0.877) 0%, white 100%);
+}
+
+.staff-shift-card.excellent:hover {
+    box-shadow: 0 4px 12px rgba(1, 167, 104, 0.2);
+    border-color: #01A768;
+}
+
+/* Excellent Performance Card Style */
+.staff-shift-card.normal {
+    border-color: #0186a7;
+    background: linear-gradient(190deg, rgba(162, 199, 221, 0.877) 0%, white 100%);
+}
+
+.staff-shift-card.normal:hover {
+    box-shadow: 0 4px 12px rgba(3, 93, 116, 0.2);
+    border-color: #0186a7;
+}
+
+/* Low Performance Card Style */
+.staff-shift-card.low {
+    border-color: #FF9800;
+    background: linear-gradient(190deg, rgba(245, 221, 185, 0.938) 0%, white 100%);
+}
+
+.staff-shift-card.low:hover {
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+    border-color: #FF9800;
+}
+
+
+/* Card Header - Single Row Layout */
+.staff-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333333bb;
+}
+
+.staff-info {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    flex-wrap: wrap;
+    margin: 0px 1px;
+}
+
+.staff-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1D242E;
+    padding: 1px;
+    border: none;
+}
+
+.shift-date,
+.shift-time,
+.shift-duration {
+    font-size: 14px;
+    color: #3a3a3a;
+    font-weight: 500;
+}
+
+.shift-date::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #ddd;
+    margin: 0 12px;
+    vertical-align: middle;
+}
+
+/* Stats Layout - Single Row */
+.staff-card-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.stat-row {
+    display: contents;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #4e4e4e;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 18px;
+    color: #1D242E;
+    font-weight: 600;
+}
+
+/* Performance Badge */
+.stat-item.performance {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.performance-badge {
+    padding: 10px 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    /* white-space: nowrap; */
+}
+
+.performance-badge.excellent {
+    background: rgba(255, 255, 255, 0.329);
+    color: #04794c;
+    border: 2px solid #01A768;
+}
+
+.performance-badge.normal {
+    background: rgba(255, 255, 255, 0.199);
+    color: #035d74;
+    border: 2px solid #0186a7;
+}
+
+.performance-badge.low {
+    background: rgba(255, 255, 255, 0.199);
+    color: #d66b06;
+    border: 2px solid #FF9800;
+}
+
+/* No Data State */
+.no-data {
+    background: white;
+    border: 2px dashed #ddd;
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.no-data p {
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .staff-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .shift-date::before {
+        display: none;
+    }
+    
+    .staff-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .view-report-btn {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .staff-card-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-item.performance {
+        grid-column: 1 / -1;
+        align-items: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .sidebar,
+    .reports-header .download-dropdown,
+    .filter-bar,
+    .report-tabs,
+    .summary-boxes,
+    .sidebar-credits {
+        display: none !important;
+    }
+    
+    .content {
+        margin: 0 !important;
+        padding: 20px !important;
+        width: 100% !important;
+    }
+    
+    .details-panel {
+        display: block !important;
+    }
+    
+    .details-content {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+    
+    .details-content.active {
+        display: block !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        background: white !important;
+        color: black !important;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    .status-badge {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+        background: white !important;
+    }
+    
+    h2, h3 {
+        color: #000 !important;
+    }
+}   
+
+/* ========================================
+   SHIFT STATUS CARD (Staff Report)
+   ======================================== */
+
+.shift-status-card {
+    background: white;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.shift-status-card.ongoing {
+    border-color: #0adf62;
+    background: linear-gradient(135deg, rgba(193, 253, 218, 0.897) 0%, white 100%);
+}
+
+.shift-status-card.completed {
+    border-color: #4d5358;
+    background: linear-gradient(135deg, rgba(108, 117, 125, 0.05) 0%, white 100%);
+}
+
+.shift-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.shift-staff-info,
+.shift-time-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shift-label {
+    font-size: 15px;
+    color: #666;
+    font-weight: 500;
+}
+
+.shift-staff-name,
+.shift-time {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1D242E;
+}
+
+.shift-performance {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.performance-status {
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.performance-status.excellent {
+    background: #d4edda;
+    color: #155724;
+}
+
+.performance-status.low {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.performance-status.normal {
+    background: #ffffff;
+    color: #035d74;
+}
+
+.clock-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D242E;
+}
+
+.shift-status-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 2px solid #383d41;
+}
+
+.ongoing-banner {
+    background: linear-gradient(135deg, #20db6e 0%, #028a56 100%);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* ========================================
+   PAYMENT DETAILS CONTAINER
+   ======================================== */
+
+.payment-details-container {
+    background: white;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-row:last-child {
+    border-bottom: none;
+}
+
+.payment-row.total {
+    border-top: 3px solid #1D242E;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.payment-label {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.payment-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D242E;
+}
+
+.payment-row.total .payment-label {
+    font-size: 18px;
+    color: #1D242E;
+    font-weight: 700;
+}
+
+.payment-row.total .payment-value {
+    font-size: 24px;
+    color: #01A768;
+}
+
+/* Summary Cards Change Indicator */
+.card-change {
+    font-size: 12px;
+    color: #01A768;
+    font-weight: 600;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media screen and (max-width: 768px) {
+    .shift-status-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .payment-details-container {
+        padding: 15px 20px;
+    }
+    
+    .payment-label,
+    .payment-value {
+        font-size: 14px;
+    }
+    
+    .payment-row.total .payment-value {
+        font-size: 18px;
+    }
+}
